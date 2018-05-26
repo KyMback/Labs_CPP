@@ -1,0 +1,45 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import Models.MainModel?>
+<GridPane fx:controller="Controllers.MainController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <fx:define>
+        <MainModel fx:id="model" />
+    </fx:define>
+
+    <Label text="Legal person"
+           GridPane.columnIndex="0"
+           GridPane.rowIndex="0"/>
+    <Button GridPane.columnIndex="0"
+            GridPane.rowIndex="1"
+            text  = "to order by legal person"
+            onMouseClicked="#toOrderByLegalPerson"
+            minWidth="200"/>
+    <Button GridPane.columnIndex="0"
+            GridPane.rowIndex="2"
+            text  = "pay by legal person"
+            onMouseClicked="#payByLegalPerson"
+            minWidth="200"/>
+    <Label GridPane.columnIndex="0"
+           GridPane.rowIndex="3"
+           minWidth="200"
+           text="${model}" />
+
+
+    <Label text="Physical person"
+           GridPane.columnIndex="1"
+           GridPane.rowIndex="0"/>
+    <Button GridPane.columnIndex="1"
+            GridPane.rowIndex="1"
+            text  = "to order by physical person"
+            onMouseClicked="#toOrderByPhysicalPerson"
+            minWidth="200"/>
+    <Button GridPane.columnIndex="1"
+            GridPane.rowIndex="2"
+            text  = "pay by physical person"
+            onMouseClicked="#payByPhysicalPerson"
+            minWidth="200"/>
+</GridPane>
